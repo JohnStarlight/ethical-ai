@@ -26,21 +26,26 @@ ALGORITHM palindrome(word):
   RETURN TRUE  
   
 ## Python Palindrome Function
-  
+```  
   def palindrome(word):
+    # Keep only letters and convert to lowercase
     clean = ''.join(char for char in word if char.isalpha()).lower()
 
+    # Start from both ends
     left = 0
     right = len(clean) - 1
 
+    # Move inward until the pointers meet
     while left < right:
+        # If the characters don't match, it's not a palindrome
         if clean[left] != clean[right]:
             return False
         left += 1
         right -= 1
 
+    # All characters matched
     return True
-  
+```  
 ## Reflection
   
   I missed one edge case where the string is a single space or letter. I should think beforehand to treat single or two letter strings as a non-palindrome and exclude them.  
