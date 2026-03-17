@@ -27,19 +27,19 @@ ALGORITHM palindrome(word):
   
 ## Python Palindrome Function
   
-  def palindrome(word):  
-   clean = ''.join(char for char in word if char.isalpha()).lower()  
+  def palindrome(word):
+    clean = ''.join(char for char in word if char.isalpha()).lower()
 
-   left = 0  
-   right = len(clean) - 1  
-      
-   while left < right:  
-        if clean[left] != clean[right]:  
-            return False  
-        left += 1  
-        right -= 1  
-      
-   return True  
+    left = 0
+    right = len(clean) - 1
+
+    while left < right:
+        if clean[left] != clean[right]:
+            return False
+        left += 1
+        right -= 1
+
+    return True
   
 ## Reflection
   
