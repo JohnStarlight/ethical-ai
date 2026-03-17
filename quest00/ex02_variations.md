@@ -3,20 +3,26 @@
 ## Python
 
     def palindrome(word):
+    # Keep only letters and convert to lowercase
     clean = ''.join(char for char in word if char.isalpha()).lower()
 
+    # A palindrome needs at least 3 characters
     if len(clean) < 3:
         return False
 
+    # Start from both ends
     left = 0
     right = len(clean) - 1
 
+    # Move inward until the pointers meet
     while left < right:
+        # If the characters don't match, return the position
         if clean[left] != clean[right]:
             return (left, right)
         left += 1
         right -= 1
 
+    # All characters matched
     return True
 
 ## Reflection
